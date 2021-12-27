@@ -7,11 +7,11 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-- task: TerraformTaskV1@0
+- task: TerraformTaskV2@2
   inputs:
     provider: 'aws'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/aws/kubernetes'
     backendServiceAWS: 'aws-for-terraform'
-    backendAWSBucketName: 'terraform-backend-state-in28minutes-123'
+    backendAWSBucketName: 'terraform-backend-state-grish-mphasis'
     backendAWSKey: 'kubernetes-dev.tfstate'
